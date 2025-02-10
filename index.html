@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food, LLC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: gray;
+            padding: 15px;
+            position: relative;
+        }
+
+        .navbar-brand {
+            color: black;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        .menu-icon {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            width: 30px;
+            height: 25px;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+
+        .menu-icon::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            border-top: 3px solid black;
+            transform: translateY(-50%);
+        }
+
+        .dropdown-menu {
+            display: none;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .page-heading {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .content-section {
+            background-color: gray;
+            margin: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Added styles for better section spacing */
+        .content-section p {
+            margin-bottom: 20px;
+        }
+
+        /* Added smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 767px) {
+            .menu-icon {
+                display: block;
+            }
+
+            #menu-toggle:checked ~ .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">Food, LLC</a>
+        <label for="menu-toggle" class="menu-icon"></label>
+        <input type="checkbox" id="menu-toggle" style="display: none;">
+        <div class="dropdown-menu">
+            <a href="#chicken">Chicken</a>
+            <a href="#beef">Beef</a>
+            <a href="#sushi">Sushi</a>
+        </div>
+    </nav>
+
+    <h1 class="page-heading">Our Menu</h1>
+
+    <div id="chicken" class="content-section">
+        <h2 class="section-title">Chicken</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+
+    <div id="beef" class="content-section">
+        <h2 class="section-title">Beef</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+
+    <div id="sushi" class="content-section">
+        <h2 class="section-title">Sushi</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+</body>
+</html>
